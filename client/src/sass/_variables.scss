@@ -1,0 +1,64 @@
+
+$pathogen-font-family: Arial, sans-serif;
+// mat requires special treatment: it wants the entire variable as a string
+$mat-pathogen-font-family: 'Arial, sans-serif';
+
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+//definitions for mat-typography-config
+$pathogen-display-4: ('font-size':112px, 'line-height':112px, 'font-weight':300);
+$pathogen-display-3: ('font-size':56px, 'line-height':56px, 'font-weight': 400);
+//used to be "mat-h3". angular mat-h3 is much smaller. Now mat-display-2
+$pathogen-display-2: ('font-size':45px, 'line-height':48px, 'font-weight': $font-weight-bold);
+//used to be "mat-h4". angular mat-h4 is much smaller, previously used for biggest title. Now mat-display-1
+$pathogen-display-1: ('font-size':34px, 'line-height':40px, 'font-weight': $font-weight-bold);
+$pathogen-headline: ('font-size':24px, 'line-height':32px, 'font-weight': 400); //used to be "mat-h5" -> mat-h1
+$pathogen-title: ('font-size':20px, 'line-height':32px, 'font-weight': $font-weight-bold); //"h6-bold" -> mat-h2. changed fontweight
+$pathogen-subheading-2: ('font-size':16px, 'line-height':28px, 'font-weight': $font-weight-black); //subtitle1 -> h3/subheading-2
+$pathogen-subheading-1: ('font-size':14px, 'line-height':24px, 'font-weight': $font-weight-medium); //subtitle2 -> h4/subheading-1
+$pathogen-body-2: ('font-size':14px, 'line-height':24px, 'font-weight': 500);
+$pathogen-body-1: ('font-size':14px, 'line-height':20px, 'font-weight': 400);
+$pathogen-caption: ('font-size':12px, 'line-height':20px, 'font-weight': 400);
+$pathogen-button: ('font-size':15px, 'line-height':15px, 'font-weight': 500);
+// Line-height must be unit-less fraction of the font-size.
+$pathogen-input: ('font-size':inherit, 'line-height':1.125, 'font-weight': 400);
+
+
+/* this block should be kept in sync with color-constants.ts */
+// brand primary colors:
+$pathogen-blue: #007AC2;
+$pathogen-black: #000000;
+// brand secondary colors:
+$pathogen-green: #77B800;
+$pathogen-light-blue: #2AA9E0; // todo: this is still used as a string instead of a variable in :hover elements
+$pathogen-bright-orange: #F7941D;
+$pathogen-dark-orange: #E36F1E;
+
+// colors 
+$disabled-yellow: #FCE883;
+$error-red: red;
+$white-background: white;
+$white-text: white;
+$off-white: #F4F4F4;
+$silver: #E7E8EA;
+$light-grey: #A9A9A9;
+$gray: gray;
+$muted-gray: #6c757d;
+$dark-gray: #444444;
+$nearly-black: #212529;
+$black: black;
+$pathogen-header-background: #201C1C;
+$background-blue-black: #121141;
+
+$font-size-largest: 36px;
+$font-size-huge: 32px;
+$font-size-xl: 30px;
+$font-size-large: 28px;
+$font-size-medium: 24px;
+$font-size-small: 20px;
+$font-size-xs: 16px;

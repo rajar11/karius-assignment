@@ -1,0 +1,80 @@
+<h1>Add New Pathogen</h1>
+<div class="container">
+  <form>
+    <div>
+      <label>Pathogen Common Name</label>
+      <input type="text"
+             [(ngModel)]="pathogen.pathogenCommonName"
+             name="pathogenCommonName"
+             class="form-control"
+              required>
+    </div>
+
+    <div>
+      <label>Pathogen Scientific Name</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenScientificName"
+             [(ngModel)]="pathogen.pathogenScientificName" required>
+    </div>
+
+    <div>
+      <label>Family</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenFamily"
+             [(ngModel)]="pathogen.pathogenFamily" required>
+
+    </div>
+
+    <div>
+      <label>Pathogen Viral Factor</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenViralFactor"
+             [(ngModel)]="pathogen.pathogenViralFactor" required>
+
+    </div>
+
+    <div>
+      <label>Pathogen Annotation</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenAnnotation"
+             [(ngModel)]="pathogen.pathogenAnnotation" >
+
+    </div>
+
+    <div>
+      <label>Pathogen Clinical Symptoms</label>
+      <input type="textarea"
+             class="form-control"
+             name="pathogenClinicalSymptoms"
+             [(ngModel)]="pathogen.pathogenClinicalSymptoms" required>
+    </div>
+
+    <div>
+      <label>Pathogen Genome Sequence</label>
+      <input type="file"
+             #genomesequencefile
+             class="form-control"
+             name="pathogenSequence"
+             accept=".txt"
+             (change)="importGenomeSequence($event)"
+             [(ngModel)]="pathogen.pathogenSequence" required>
+    </div>
+  </form>
+</div>
+
+
+<mat-dialog-actions>
+
+  <button class="mat-raised-button" (click)="closeDialog()">
+    Close
+  </button>
+
+  <button class="mat-raised-button mat-primary" (click)="save()">
+    Save
+  </button>
+
+</mat-dialog-actions>

@@ -1,0 +1,77 @@
+@import "~src/sass/extendableClasses";
+@import "~src/sass/fontSizes";
+
+.title-panel {
+  @extend .col-12;
+}
+
+.left-panel {
+  @extend .col-7;
+}
+
+.right-panel {
+  @extend .col-5;
+}
+
+.pathogen-title {
+  @extend .mb-0;
+  @extend .mat-display-1;
+}
+
+.pathogen-module, .pathogen-result-header {
+  @extend .mat-h1;
+  @extend .text-muted;
+}
+
+.pathogen-result-header {
+  @extend .row;
+}
+
+.pathogen-result-row {
+  @extend .row;
+  padding-left: 5px;
+}
+
+.pathogen-info-row {
+  @extend .row;
+  @extend .pt-2;
+}
+
+.test-info-cell {
+  @extend .col-6;
+  display: flex !important;
+  flex-direction: column;
+  word-wrap: break-word; // allows continuous strings to break in the cells
+}
+
+.pathogen-info-cell-4 {
+  @extend .col-4;
+  display: flex !important;
+  flex-direction: column;
+  word-wrap: break-word; // allows continuous strings to break in the cells
+}
+
+.pathogen-info-cell-title {
+  @extend .mat-subheading-2;
+  @extend .text-muted;
+}
+
+.pathogen-info-cell-text {
+  @extend .mat-h1;
+  @extend .pt-2;
+  line-height: 25px !important; // helps with broken line spacing
+}
+
+.pathogen-info-small-text {
+  @extend .mat-subheading-2;
+}
+
+.pathogen-result-text {
+  @extend .mat-h4-medium;
+}
+
+.button-container {
+  @extend .row;
+  @extend .pt-3;
+  @extend .font-medium;
+}

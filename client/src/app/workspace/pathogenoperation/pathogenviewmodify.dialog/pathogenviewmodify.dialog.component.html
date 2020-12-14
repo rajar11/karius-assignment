@@ -1,0 +1,78 @@
+<h1>View/Edit Pathogen Details</h1>
+<div class="container">
+  <form>
+    <div>
+      <label>Pathogen Common Name</label>
+      <input type="text"
+             [ngModel]="pathogen.pathogenCommonName"
+             name="pathogenCommonName"
+             class="form-control"
+             readonly>
+    </div>
+
+    <div>
+      <label>Pathogen Scientific Name</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenScientificName"
+             [ngModel]="pathogen.pathogenScientificName" readonly>
+    </div>
+
+    <div>
+      <label>Family</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenFamily"
+             [(ngModel)]="pathogen.pathogenFamily" [readonly]="isReadOnly()">
+
+    </div>
+
+    <div>
+      <label>Pathogen Viral Factor</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenViralFactor"
+             [(ngModel)]="pathogen.pathogenViralFactor" [readonly]="isReadOnly()">
+
+    </div>
+
+    <div>
+      <label>Pathogen Annotation</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenAnnotation"
+             [(ngModel)]="pathogen.pathogenAnnotation" [readonly]="isReadOnly()">
+
+    </div>
+
+    <div>
+      <label>Pathogen Clinical Symptoms</label>
+      <input type="textarea"
+             class="form-control"
+             name="pathogenClinicalSymptoms"
+             [(ngModel)]="pathogen.pathogenClinicalSymptoms" [readonly]="isReadOnly()">
+    </div>
+
+    <div>
+      <label>Pathogen Genomic Sequence</label>
+      <input type="text"
+             class="form-control"
+             name="pathogenSequence"
+             [ngModel]="pathogen.pathogenSequence" readonly>
+    </div>
+
+  </form>
+</div>
+
+
+<mat-dialog-actions>
+
+  <button class="mat-raised-button" (click)="closeDialog()">
+    Close
+  </button>
+
+  <button class="mat-raised-button mat-primary" (click)="save()">
+    {{ (isReadOnly() ? 'Edit' : 'Save') }}
+  </button>
+
+</mat-dialog-actions>

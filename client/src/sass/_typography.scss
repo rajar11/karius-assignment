@@ -1,0 +1,75 @@
+/*!
+ * Copyright (c) 2019 Cepheid. All Rights Reserved.
+ */
+@import "variables";
+@import "~@angular/material/theming";
+
+/* Typography */
+
+/*Conversion Ration sp to rem for html */
+$conversionRatioSpToRemWeb: 1/16; //! 0.0625;
+$conversionRatioRemToPxWeb: 16.0;
+// Scales
+@function spToRem($sps) {
+  @return $sps * $conversionRatioSpToRemWeb;
+}
+
+;
+@function remToPx($rems) {
+  @return $rems * $conversionRatioRemToPxWeb;
+}
+
+;
+@function spacing($tracking, $px) {
+  @return $tracking / $px;
+}
+
+;
+@mixin mat-typo($size, $weight, $spacing) {
+  font-weight: $weight !important;
+  font-size: #{spToRem($size)}rem !important;
+  letter-spacing: #{spacing($spacing, remToPx($size))}px !important;
+}
+
+//Overwrite default Angular Typography
+$custom-typography: mat-typography-config(
+        $font-family: $mat-cepheid-font-family,
+        $display-4: mat-typography-level($cepheid-display-4...),
+        $display-3: mat-typography-level($cepheid-display-3...),
+        $display-2: mat-typography-level($cepheid-display-2...), //used to be "mat-h3". angular mat-h3 is much smaller.
+        $display-1: mat-typography-level($cepheid-display-1...), //used to be "mat-h4". angular mat-h4 is much smaller, use for biggest title
+        $headline: mat-typography-level($cepheid-headline...), //used to be "mat-h5", is now mat-h1
+        $title: mat-typography-level($cepheid-title...), //used to be "h6-bold" now mat-h2. changed fontweight
+        $subheading-2: mat-typography-level($cepheid-subheading-2...), //subtitle1 now mat-h3 or subheading-2
+        $subheading-1: mat-typography-level($cepheid-subheading-1...), //subtitle2 now mat-h4 or subheading-1
+        $body-2: mat-typography-level($cepheid-body-2...),
+        $body-1: mat-typography-level($cepheid-body-1...),
+        $caption: mat-typography-level($cepheid-caption...),
+        $button: mat-typography-level($cepheid-button...),
+          // Line-height must be unit-less fraction of the font-size.
+        $input: mat-typography-level($cepheid-input...));
+
+@include mat-base-typography($custom-typography);
+
+//Odd sizing. (Font height calculated by reboot, 1.5). No good equivalent in Angular typography
+// use for title
+.mat-h4-medium {
+  @include mat-typo(30, $font-weight-medium, 0);
+}
+
+//Same issue as mat-h4-medium
+.mat-h4-bold {
+  @include mat-typo(30, $font-weight-bold, 0);
+}
+
+.mat-h6-bold {
+  @include mat-typo(20, $font-weight-bold, 0);
+}
+
+.mat-subtitle2-warning {
+  @extend .mat-subheading-1;
+  font-weight: $font-weight-bold;
+  color: $error-red;
+}
+
+//use for table text with warning

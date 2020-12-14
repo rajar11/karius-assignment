@@ -1,0 +1,373 @@
+//@import "variables";
+//@import "bootstrapWithOverrides";
+//@import "fontSizes";
+//@import '~@angular/material/theming';
+//@import 'extendableClasses';
+
+
+// overrides the MATERIAL DESIGN variables
+//$mat-custom-font: mat-typography-config($font-family: $mat-pathogen-font-family);
+//@include mat-core($mat-custom-font);
+
+/*
+html {
+  background-color: $off-white;
+
+  :not(input):not(textarea) {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+  }
+}
+
+.app-container {
+  background-color: $off-white;
+  padding-bottom: 20px;
+}
+
+.continue-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $cepheid-blue;
+  border: solid 1px $cepheid-blue;
+  width: 100%;
+  height: 50px;
+  color: $white-text;
+  border-radius: 8px;
+  margin-right: 50px;
+}
+
+.input-border-none {
+  border: none;
+}
+
+.input-error {
+  color: $error-red;
+}
+
+.input-text {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid $gray;
+  border-radius: 0;
+}
+
+.inner-container {
+  padding: 25px 50px 50px;
+  background-color: $white-background !important;
+  box-shadow: 0 30px 20px -15px rgba(0, 0, 0, 0.2);
+}
+
+.md-dialog-container {
+  background-color: $white-background;
+  width: 800px;
+  height: 600px
+}
+
+.sm-dialog-container {
+  background-color: $white-background;
+  width: 450px;
+  height: 120px
+}
+
+.margin-l-30 {
+  margin-left: 30px;
+}
+
+.margin-l-20 {
+  margin-left: 20px;
+}
+
+.margin-l-10 {
+  margin-left: 10px;
+}
+
+.margin-r-30 {
+  margin-right: 30px;
+}
+
+.margin-r-20 {
+  margin-right: 20px;
+}
+
+.margin-r-10 {
+  margin-right: 10px;
+}
+
+.margin-t-30 {
+  margin-top: 30px;
+}
+
+.margin-b-80 {
+  margin-bottom: 80px;
+}
+
+.margin-t-20 {
+  margin-top: 20px;
+}
+
+.margin-t-10 {
+  margin-top: 10px;
+}
+
+.margin-b-30 {
+  margin-bottom: 30px;
+}
+
+.margin-b-20 {
+  margin-bottom: 20px;
+}
+
+.margin-b-10 {
+  margin-bottom: 10px;
+}
+
+.component-full-width {
+  width: 100%;
+}
+
+mat-dialog-content {
+  align-contents : vertical
+}
+*/
+/*
+  Dialog Basic Container
+*/
+/*
+.dialog-basic-container-class .mat-dialog-container {
+  background-color: $silver;
+  color: $dark-gray;
+  border: solid 2px $background-blue-black;
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  height: 600px
+}
+
+.mat-dialog-content {
+  white-space: pre-line; // preserve '\n' line breaks
+}
+*/
+
+/*
+  Login and Scan ID Card components
+ */
+ /*
+.form-signin {
+  width: 100%;
+  max-width: 475px;
+  padding: 15px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.input-login-group {
+  margin-top: 10px;
+}
+
+.login-field ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 1em 0;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.container-wide {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.pathogen-table {
+  table-layout: fixed;
+}
+
+.pathogen-table thead th {
+  border: none !important;
+  font-size: small;
+}
+
+.pathogen-table thead th:hover {
+  cursor: pointer;
+}
+
+.pathogen-table tbody th {
+  vertical-align: middle;
+}
+
+.pathogen-table tbody td {
+  vertical-align: middle;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.pathogen-table.top-align-table tbody td {
+  vertical-align: top;
+}
+
+.pathogen-table-hover tbody tr:hover {
+  cursor: pointer;
+}
+
+.right-arrow {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-size: 42px;
+  font-weight: bold;
+  color: $cepheid-light-blue;
+}
+*/
+/* --------------------------------------------- */
+/* Load google's Roboto font*/
+/* More information can be found here */
+/* @see https://material.io/design/typography/#type-scale*/
+/* @see https://gist.github.com/amlang/c82496a3b36050616e99963d23c5d291 */
+/* @see https://material.io/ */
+/* @see https://github.com/material-components/material-components-web/blob/master/LICENSE */
+
+/* Reboot */
+/*
+html, body {
+  margin: 0 !important;
+}
+*/
+/* Remove Scrollbar */
+/*
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+*/
+/* Typography */
+/*
+@import "typography";
+
+$color-palette: (
+        50 : #e0eff8,
+        100 : #b3d7ed,
+        200 : #80bde1,
+        300 : #4da2d4,
+        400 : #268ecb,
+        500 : #007ac2,
+        600 : #0072bc,
+        700 : #0067b4,
+        800 : #005dac,
+        900 : #004a9f,
+        A100 : #c9dfff,
+        A200 : #96c0ff,
+        A400 : #63a1ff,
+        A700 : #4a91ff,
+        contrast: (
+                50: $dark-primary-text,
+                100: $dark-primary-text,
+                200: $dark-primary-text,
+                300: $light-primary-text,
+                400: $light-primary-text,
+                500: $light-primary-text,
+                600: $light-primary-text,
+                700: $light-primary-text,
+                800: $light-primary-text,
+                900: $light-primary-text,
+                A100: $dark-primary-text,
+                A200: $light-primary-text,
+                A400: $light-primary-text,
+                A700: $light-primary-text,
+        )
+);
+$color-primary: mat-palette($color-palette);
+$color-accent: mat-palette($color-palette);
+$color-theme: mat-light-theme($color-primary, $color-accent);
+
+@include angular-material-theme($color-theme);
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/lib/materialicons/material-icons-v42.woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.float-right {
+  float: right
+}
+
+.image-width {
+  height: 35px;
+  margin-right: 12px;
+}
+
+.filter_label_adjustment #filter_label {
+  margin-top: 0.5rem;
+}
+
+// the following match the app.component.ts file constants
+$small_osk_height: 225px;
+$medium_osk_height: 350px;
+$large_osk_height: 500px;
+
+.osk-padding-small {
+  padding-bottom: $small_osk_height;
+}
+
+.osk-padding-medium {
+  padding-bottom: $medium_osk_height;
+}
+
+.osk-padding-large {
+  padding-bottom: $large_osk_height;
+}
+
+.with-new-line-break {
+  white-space: pre-line;
+  text-align: start
+}
+
+.max-character {
+  word-break: break-word;
+  white-space: normal !important;
+}
+
+.max-ellipses {
+  width: 100% !important;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap !important;
+  text-overflow: ellipsis;
+  padding: auto 10px;
+  margin: 0px;
+}
+
+.max-ellipses-multiline {
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+ */
+  /* autoprefixer: ignore next */
+  /*
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+*/
+
