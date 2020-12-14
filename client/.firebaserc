@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kariusassignment": {
+      "hosting": {
+        "pathmgmt": [
+          "kariusassignment"
+        ]
+      }
+    }
+  }
+}
